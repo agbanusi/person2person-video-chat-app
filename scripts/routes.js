@@ -31,7 +31,7 @@ result()
 //main routing function
 module.exports = function routes(app, db, bcrypt, id, ObjectID) {
 
-    app.get('/', (req, res) => {
+    app.get('*', (req, res) => {
         res.sendFile("index.html", { root: './view/first' })
     })
     app.post('/register', (req, res) => {
