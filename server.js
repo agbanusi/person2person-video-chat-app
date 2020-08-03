@@ -19,7 +19,7 @@ mongo.connect(process.env.DB, { useUnifiedTopology: true }, (err, client) => {
     let db = client.db('Cluster0');
     sockets(io)
     routes(app, db, bcrypt, id, ObjectId)
-    http.listen(3000, () => {
+    http.listen(process.env.PORT || 3000, () => {
         console.log('listening on port 3000');
     })
     
