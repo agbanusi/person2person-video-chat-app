@@ -31,7 +31,7 @@ result()
 //main routing function
 module.exports = function routes(app, db, bcrypt, id, ObjectID) {
 
-    app.get('*', (req, res) => {
+    app.get('/', (req, res) => {
         res.sendFile("index.html", { root: './view/first' })
     })
     app.post('/register', (req, res) => {
@@ -168,10 +168,10 @@ module.exports = function routes(app, db, bcrypt, id, ObjectID) {
                 }
             })
         })
-        .get((req, res) => {
+        .get((req,res)=>{
             db.collection('video-chat-users').findOne({ _id: new ObjectID(req.query.id) }, (err, doc) => {
                 if (doc) {
-                    res.json(doc)
+                    res.send(doc)
                 } else {
                     res.redirect('/?login=failed')
                 }

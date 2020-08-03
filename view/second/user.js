@@ -13,19 +13,15 @@ window.addEventListener('load', () => {
             ident = b[1].split('"')[1]
         }
     })
-    try{
-        fetch('/users?id=' + ident).then(res => res.json()).then(data => {
+    fetch('/users?id=' + ident).then(res => res.json()).then(data => {
         user=data.username
         idee= data.id
         document.getElementsByTagName('h1')[0].innerHTML += data.username
         document.getElementById('ident').innerHTML += data.id
     })
-   }catch(err){
-       console.log(err)
-   }
+
     socket.on('join',(data)=>{
         socketId=data.id
-        console.log(idee)
         if(idee){
             socket.emit('list',{...data,ident,idee})
         }
@@ -73,6 +69,7 @@ function create() {
             el.innerHTML = "<h3>Room Id created: " + id + "</h3><p>Please note that rooms and video chat has a maximum valid time of one hour.</p>" //<button onClick='video(id)'>Go To Room</button>"
             let ed=document.createElement('button')
             ed.addEventListener('click',()=>{
+                console.log(id)
                 video(id)
             })
             ed.innerHTML='Go to Room'
@@ -215,6 +212,7 @@ function dial(id) {
 }
 
 function video(id) {
+    console.log(id)
     let el = document.createElement('form')
     document.body.appendChild(el)
     el.innerHTML = '<input name="room" value=' + id + ' type="hidden" ><input name="id" value=' + user + ' type="hidden">'
