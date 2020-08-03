@@ -5,10 +5,7 @@
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "client": "cd view && yarn start",
-        "server": "nodemon server.js",
-        "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+        "server": "nodemon server.js"
     },
     "author": "John",
     "license": "ISC",
