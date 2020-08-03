@@ -1,0 +1,161 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    display: grid;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(90deg, #2c3e50, #1f84c7);
+}
+
+html {
+    background-image: linear-gradient(90deg, #2c3e50, #1f84c7);
+}
+
+.second {
+    width: 75vw;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+form,
+.newForm {
+    height: 50vh;
+    display: grid;
+    width: 40vw;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 3px 3px #021d30;
+    justify-content: center;
+}
+
+form div {
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.join {
+    justify-content: center;
+}
+
+input {
+    height: 2rem;
+    width: 12rem;
+    padding: 0.25rem;
+    background-color: #9ebfd4;
+    border: none;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.users {
+    margin: 1px solid grey;
+}
+
+button,.button {
+    height: 2.5rem;
+    width: 7.5rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: green;
+    margin: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    margin-top: 5rem;
+    height: 100vh;
+}
+
+.video-large {
+    height: 72.5vh;
+    width: 70vw;
+}
+
+#video-small {
+    position: fixed;
+    height: 27vh;
+    width: 25vw;
+    margin-left: 5.75rem;
+    margin-top: -37.75rem;
+}
+
+.active {
+    background-color: green !important;
+}
+
+.newForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.round{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.groups {
+    width: 65vw;
+    border: 1.5px solid rgb(32, 131, 134);
+    border-radius: 1rem;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 1rem;
+}
+
+#contactList,#contactForm,#inv {
+    padding-top:1rem;
+    padding-bottom:1rem;
+    width: 40vw;
+    border: 1.5px solid rgb(32, 131, 134);
+    border-radius: 0.75rem;
+    display: grid;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+#inv {
+    border-left: 30vw;
+}
+.contact {
+    width:40vw;
+    margin:0px;
+    height:2rem;
+    width: 100%;
+    color:white;
+}
+
+.contact:hover {
+    background-color: rgb(3, 46, 71);
+}
+
+.groups div {
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.kin{
+    display: grid;
+    place-items: center;
+}
+#invite{
+    display: grid;
+    place-items: center;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}

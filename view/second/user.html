@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/view/styles.css">
+    <script src='/socket.io/socket.io.js'></script>
+    <title>Video chat App</title>
+    <script src="/view/second/user.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome </h1>
+        <hr>
+        <h2 id='ident'>User ID: </h2>
+        <p class='large'>What do you want to do?</p>
+        <h3 id='doneRoom'></h3>
+        <hr>
+        <div class='groups' id='create'>
+            <div>Create a room <button onclick='create()'>Create</button></div>
+        </div>
+        <div class='groups' id='join'>
+            <div>Join a room <button onclick='join()'>Join</button></div>
+        </div>
+        <div class='groups' id='add'>
+            <div>Add Contacts <button onclick="add()">Here</button></div>
+        </div>
+        <div class='groups' id='change'>
+            <button onclick='change()'>Change Password</button>
+            <button ><a href='/'>Home</a></button>
+        </div>
+
+    </div>
+</body>
+
+</html>

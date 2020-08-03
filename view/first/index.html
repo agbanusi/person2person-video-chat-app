@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Video chat App</title>
+    <link rel="stylesheet" href="/view/styles.css" type="text/css">
+    <script src="/view/first/script.js"></script>
+</head>
+
+<body>
+    <div class="welcome">
+        <h3>
+            Welcome to Video Chat App
+        </h3>
+    </div>
+    <div class="second">
+        <form id='form'>
+            <h4>Please register or login to create a room.</h4>
+            <p id='loggy' style='opacity:0;'>Logging you in...</p>
+            <div>
+                <h5>Email/Username:</h5><input name='user' id='userid' type="text"></div>
+            <div>
+                <h5>Password:</h5><input name='passwords' id='password' type="password"></div>
+            <div><button class="register" onclick="register_login('/register')">Register</button><button class='login' onclick="register_login('/login')">Login</button></div>
+        </form>
+        <h3>OR</h3>
+        <form id='form2'>
+            <h4>Join a room here</h4>
+            <p id='roomie' style='opacity:0;'>Joining the room...</p>
+            <div id='text'>
+                <h5>Name:</h5><input name='id' id='id' type="text"></div>
+            <div id='room'>
+                <h5>Room Id:</h5><input name='room' id='room' type="text"></div>
+            <div class='join'><button onclick="join('/join')">Join</button></div>
+        </form>
+    </div>
+</body>
+
+</html>
