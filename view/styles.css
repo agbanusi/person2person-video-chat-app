@@ -6,11 +6,11 @@ body {
     color: white;
     justify-content: center;
     text-align: center;
-    background-image: linear-gradient(90deg, #2c3e50, #1f84c7);
+    background-image: linear-gradient(90deg, #1380c9, #2c3e50);
 }
 
 html {
-    background-image: linear-gradient(90deg, #2c3e50, #1f84c7);
+    background-image: linear-gradient(90deg, #1380c9, #2c3e50);
 }
 
 .second {
@@ -60,7 +60,7 @@ input[type="number"] {
 }
 
 .users {
-    margin: 1px solid grey;
+    margin: 1.5px solid grey;
 }
 
 button,.button {
@@ -73,7 +73,9 @@ button,.button {
     color: white;
     cursor: pointer;
 }
-
+button:focus{
+    outline:none;
+}
 .container {
     margin-top: 5rem;
     height: 100vh;
@@ -81,7 +83,7 @@ button,.button {
 
 .video-large {
     height: 72.5vh;
-    width: 70vw;
+    width: 90vw;
 }
 
 #video-small {
@@ -158,4 +160,42 @@ button,.button {
 a{
     color: inherit;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px){
+    .second{
+        width:100vw;
+    }
+    form,.newForm{
+        width:80vw;
+        height: 42.5vh;
+        font-size: 1.5em;
+    }
+    form div{
+        width: 75vw;
+        justify-content: space-around;
+    }
+    .groups{
+        width:90vw;
+    }
+    .groups div{
+        width:75vw;
+    }
+    #contactForm,#contactList,#inv{
+        width: 75vw;
+    }
+    #inv{
+        border-left: 12.5vw;
+    }
+    button,.button{
+        height: 3.5rem;
+        width: 8.5rem;
+    }
+    .contact{
+        width:80vw;
+    }
+    .video-large{
+        width: 90vw;
+        height: 55vh;
+    }
 }
