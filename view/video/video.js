@@ -88,10 +88,11 @@
      })
      //cand()
      //track()
-     //setInterval(()=>{
-         //get()
-         //pc = new peerConnection(configuration)
-        //}, 120000)
+     setInterval(()=>{
+        if(pc.connectionState=='closed' || pc.connectionState=='disconnected' || !pc ){
+        window.location.replace('/')
+        window.location=('/')
+     }},100)
  })
  
  function track(){
@@ -200,10 +201,9 @@
          el.style.marginBottom = '0.5rem'
          users.appendChild(el)
          den = document.createElement('button')
-         den.innerHTML='End Chat'
+         den.innerHTML='<a href="/">End Chat</a>'
          den.addEventListener('click',()=>{
              pc.close()
-             location.href='/login'
          })
          users.appendChild(den)
 
