@@ -88,11 +88,7 @@
      })
      //cand()
      //track()
-     setInterval(()=>{
-        if(pc.connectionState=='closed' || pc.connectionState=='disconnected' || !pc ){
-        window.location.replace('/')
-        window.location=('/')
-     }},100)
+     
  })
  
  function track(){
@@ -137,6 +133,15 @@
             pc = new peerConnection(configuration)
             track()
             cand()
+            setInterval(()=>{
+                if(pc.iceConnectionState=='closed' || pc.iceConnectionState=='disconnected' || pc.iceConnectionState=='failed' ){
+                document.getElementById('video-small').removeAttribute("src");
+                document.getElementById('video-small').removeAttribute("srcObject")
+                document.getElementById('videos').removeAttribute("src");
+                document.getElementById('videos').removeAttribute("srcObject")
+                window.location.replace('/')
+                window.location=('/')
+             }},1000)
         })
  }
 
@@ -203,7 +208,16 @@
          den = document.createElement('button')
          den.innerHTML='<a href="/">End Chat</a>'
          den.addEventListener('click',()=>{
+             pc.ontrack = null;
+             pc.onicecandidate = null;
+             pc.onicegatheringstatechange = null;
+             pc.onnegotiationneeded = null;
              pc.close()
+             pc=null
+             document.getElementById('video-small').removeAttribute("src");
+             document.getElementById('video-small').removeAttribute("srcObject")
+             document.getElementById('videos').removeAttribute("src");
+             document.getElementById('videos').removeAttribute("srcObject")
          })
          users.appendChild(den)
 
