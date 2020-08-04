@@ -129,7 +129,9 @@ button:focus{
     margin-bottom: 1.5rem;
 }
 #inv {
-    border-left: 30vw;
+    margin: 1rem;
+    margin-left: 30vw;
+    background-color: green;
 }
 .contact {
     width:40vw;
@@ -185,7 +187,8 @@ a{
         width: 75vw;
     }
     #inv{
-        border-left: 12.5vw;
+        margin:1rem;
+        margin-left: 12.5vw;
     }
     button,.button{
         height: 3.5rem;
