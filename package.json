@@ -17,7 +17,7 @@
         "express": "^4.17.1",
         "http": "0.0.1-security",
         "mongodb": "^3.5.9",
-        "node-fetch": "^2.6.0",
+        "node-fetch": "^2.6.1",
         "random-username-generator": "^1.0.4",
         "shortid": "^2.2.15",
         "socket.io": "^2.3.0"
