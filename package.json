@@ -20,6 +20,6 @@
         "node-fetch": "^2.6.0",
         "random-username-generator": "^1.0.4",
         "shortid": "^2.2.15",
-        "socket.io": "^2.3.0"
+        "socket.io": "^2.5.0"
     }
 }
